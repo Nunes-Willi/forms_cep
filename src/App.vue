@@ -19,35 +19,69 @@ export default {
 
 <template>
 
-<h1>Buscar Cep</h1>
+  <main>
 
-<form @submit.prevent="buscar">
-  <input type="text" v-model ="cep" placeholder="Digite o CEP"/>
-  <button type="submit">Buscar</button>
-</form>
-
-<form class="end">
-
-  <label for="rua">Rua</label> <input type="text" v-model="endereco.logradouro" />
-  <label for="num">Numero</label> <input type="text" v-model="endereco.numero" />
-  <label for="bairro">Bairro</label> <input type="text" v-model="endereco.bairro" />
-
-</form>
-{{endereco}}
-
-</template>
+    <h1>Buscar Cep</h1>
+    
+    <form @submit.prevent="buscar">
+      <input type="text" v-model ="cep" placeholder="Digite o CEP"/>
+      <button type="submit">Buscar</button>
+    </form>
+    
+    <form class="end">
+      
+      <label for="rua">Rua</label> <input type="text" v-model="endereco.logradouro" />
+      <label for="num">Numero</label> <input type="text" v-model="endereco.numero" />
+      <label for="bairro">Bairro</label> <input type="text" v-model="endereco.bairro" />
+      
+    </form>
+    {{endereco}}
+  </main>
+    
+  </template>
 
 <style>
-.end{
-  display: flex;
-  flex-direction: column
-}
+  body{
+    background-color: aqua;
+  }
 
-  form {
-  background-color: bisque;
-  width: 100%;
+h1{
   display: flex;
   justify-content: center;
-  }
+  margin-bottom: 100px;
+}
+
+.end{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.end input{
+  padding-left: 10px;
+  margin: 5px;
+}
+
+input{
+  padding-left: 100px;
+  margin-right: 5px;
+}
+
+form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: aquamarine;
+}
+
+main{
+  margin-top: 100px;
+  background-color: aquamarine;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 50px;
+  border-radius: 25px;
+  border: 2px solid black ;
+}
 
 </style>
